@@ -29,9 +29,9 @@ function Calculator() {
 }
 
 function eval() {
-    const a = document.getElementById('op1').textContent.trim();
-    const b = document.getElementById('op2').textContent.trim();
-    const op = document.getElementById('operator').textContent.trim();
+    const a = document.getElementById('op1').value;
+    const b = document.getElementById('op2').value;
+    const op = document.getElementById('operator').value;
 
     const cal = new Calculator();
 
@@ -43,9 +43,9 @@ function update(newresult) {
     const clr1 = document.getElementById('op2');
     const clr2 = document.getElementById('operator');
 
-    result.textContent = newresult;
-    clr1.textContent = "";
-    clr2.textContent = "";
+    result.value = newresult;
+    clr1.value = "";
+    clr2.value = "";
 }
 
 function equals() {
