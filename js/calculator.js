@@ -55,3 +55,10 @@ function equals() {
 
 const equal = document.getElementById('equals');
 equal.addEventListener('click', equals);
+
+function operatorinput(e) {
+    document.getElementById('operator').value =  e.target.textContent.trim();
+}
+
+const ops = document.querySelectorAll('.operator');
+ops.forEach((op) => op.addEventListener('click', operatorinput));
