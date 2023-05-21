@@ -72,7 +72,14 @@ clr.addEventListener('click', clear);
 
 
 function operatorInput(e) {
-    document.getElementById('operator').value =  e.target.textContent.trim();
+    const op = document.getElementById('operator');
+    const operand2 = document.getElementById('op2');
+    if (op.value !== "" && operand2.value !== "") {
+        equals();
+        op.value =  e.target.textContent.trim();
+    } else {
+         op.value =  e.target.textContent.trim();
+    }
 }
 
 const ops = document.querySelectorAll('.operator');
