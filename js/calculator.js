@@ -1,5 +1,6 @@
 //remember that DOM nodes don't load unless you specify defer!!
 
+//copied from javascript.info exercise
 function Calculator() {
 
     this.methods = {
@@ -30,7 +31,7 @@ function Calculator() {
 
 function eval() {
     const a = document.getElementById('op1').value;
-    const b = document.getElementById('op2').value;
+     const b = document.getElementById('op2').value;
     const op = document.getElementById('operator').value;
 
     const cal = new Calculator();
@@ -52,13 +53,43 @@ function equals() {
     const res = eval();
     update(res);
 }
-
 const equal = document.getElementById('equals');
 equal.addEventListener('click', equals);
 
-function operatorinput(e) {
+
+function clear() {
+    const op = document.getElementById('operator');
+    const operand1 = document.getElementById('op1');
+    const operand2 = document.getElementById('op2');
+
+    op.value = "";
+    operand1.value = "";
+    operand2.value = "";
+}
+
+const clr = document.getElementById('clear');
+clr.addEventListener('click', clear);
+
+
+function operatorInput(e) {
     document.getElementById('operator').value =  e.target.textContent.trim();
 }
 
 const ops = document.querySelectorAll('.operator');
-ops.forEach((op) => op.addEventListener('click', operatorinput));
+ops.forEach((op) => op.addEventListener('click', operatorInput));
+
+
+function numberInput(e) {
+    const op = document.getElementById('operator');
+    const operand1 = document.getElementById('op1');
+    const operand2 = document.getElementById('op2');
+
+    if (op.value === "") {
+        operand1.value += e.target.textContent.trim();
+    } else {
+        operand2.value += e.target.textContent.trim();
+    }
+}
+
+const nums = document.querySelectorAll('.number');
+nums.forEach((num) => num.addEventListener('click', numberInput));
