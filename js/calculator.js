@@ -100,3 +100,20 @@ function numberInput(e) {
 
 const nums = document.querySelectorAll('.number');
 nums.forEach((num) => num.addEventListener('click', numberInput));
+
+function backspace() {
+  const op = document.getElementById('operator');
+  const operand1 = document.getElementById('op1');
+  const operand2 = document.getElementById('op2');
+
+  if (op.value === "") {
+    operand1.value = operand1.value.slice(0,-1);
+  } else if (op2.value === "" ){
+    op.value = "";
+  } else {
+    operand2.value = operand2.value.slice(0,-1);
+  }
+}
+
+const bksp = document.getElementById('backspace');
+bksp.addEventListener('click', backspace);
