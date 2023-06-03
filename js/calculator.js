@@ -91,7 +91,7 @@ function numberInput(e) {
   const operand1 = document.getElementById('op1');
   const operand2 = document.getElementById('op2');
 
-  if (op.value === "") {
+  if (op.value === "" || operand1.value === "") {
     operand1.value += e.target.textContent.trim();
   } else {
     operand2.value += e.target.textContent.trim();
