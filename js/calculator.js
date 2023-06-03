@@ -1,5 +1,3 @@
-//remember that DOM nodes don't load unless you specify defer!!
-
 //copied from javascript.info exercise
 function Calculator() {
 
