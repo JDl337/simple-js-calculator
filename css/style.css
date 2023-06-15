@@ -1,0 +1,39 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex: auto;
+  gap: 10px;
+}
+
+.col {
+  flex: auto;
+  gap: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.input.numbers {
+  display: flex;
+  flex-direction: column;
+}
+
+.operators {
+  flex-grow: 0.4;
+}
+
+.displaypanel {
+  flex-grow: 0.4;
+}
+
+button {
+  flex: auto;
+}
+
