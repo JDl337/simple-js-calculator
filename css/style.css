@@ -39,6 +39,14 @@ body {
   flex: auto;
 }
 
+.operators .operator {
+  background-color: orange;
+}
+
+#equals {
+  background-color: red;
+}
+
 button {
   flex: auto;
   font-size: 20px;
