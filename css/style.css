@@ -1,7 +1,21 @@
+html {
+  height: 100%;
+}
+
 body {
-  height: 100vh;
+  min-height: 100%;
+  background: linear-gradient(90deg, hsla(228, 17%, 53%, 1) 0%, hsla(229, 28%, 88%, 1) 100%);
+}
+
+.allcontainer {
+  border-radius: 20px;
+  margin: 20px auto;
+  height: 90vh;
+  width: 60vw;
   display: flex;
   flex-direction: column;
+  background-color: #60696b;
+  padding: 30px;
 }
 
 .row {
@@ -33,22 +47,30 @@ body {
   flex-grow: 0.4;
   display: flex;
   flex-direction: column;
+  margin: 20px 10px;
 }
 
 .display {
   flex: auto;
 }
 
+.display > input {
+  font-size: 50px;
+  width: 98%;
+  height: 90%;
+  margin: 10px;
+}
+
 .operators .operator {
-  background-color: orange;
+  background-color: #f9bc2c;
 }
 
 #equals {
-  background-color: red;
+  background-color: #f74c06;
 }
 
 button {
   flex: auto;
-  font-size: 20px;
+  font-size: 40px;
 }
 
